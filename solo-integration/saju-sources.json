@@ -1,0 +1,78 @@
+{
+  "manseryeok": {
+    "repository": "yhj1024/manseryeok",
+    "commit": "fba3253d7305b8b61189bd78318a7a27ed8c9b09",
+    "localPatch": {
+      "year": 2050,
+      "before": "0x14b63",
+      "after": "0x18b63",
+      "changes": [
+        {
+          "year": 2050,
+          "month": 1,
+          "before": 29,
+          "official": 30
+        },
+        {
+          "year": 2050,
+          "month": 2,
+          "before": 30,
+          "official": 29
+        }
+      ],
+      "totalYearLengthChange": 0,
+      "unobservedMonthsPreserved": true,
+      "officialDatasetSha256": "3ac0847483ac1508f01963906f4b94f2b3ff8598a20e147daab49ea0ac8b399e"
+    }
+  },
+  "ssaju": {
+    "repository": "golbin/ssaju",
+    "commit": "07b608a778be6dac8669e04b9ab794c441959208"
+  },
+  "integration": "Single calendar engine; additive ssaju rule exports; day-branch 삼합국 for 역마; no external AI calls; additive 60-pillar and 24-term reference tables with SOLO-written explanations; upstream fixed-date boundaries and time tables excluded",
+  "manseryeok-js": {
+    "repository": "urstory/manseryeok-js",
+    "fork": "zenkac/manseryeok-js",
+    "commit": "b37b6b4e47d1710df48396799e51102eefa7f0c1",
+    "version": "1.0.8",
+    "license": "MIT",
+    "runtimeImports": [
+      "src/data/sixty-pillars.ts",
+      "src/data/solar-terms.ts"
+    ],
+    "calendar": "SOLO retains its original instant-based calendar. Upstream date index and boundary/time functions are retained for offline audit, not used for runtime calculation."
+  },
+  "fortuneteller": {
+    "repository": "hjsh200219/fortuneteller",
+    "fork": "zenkac/fortuneteller",
+    "commit": "844d9f6e601328a00467e8dec0966913526f858d",
+    "license": "MIT declared in upstream README.md and package.json; no standalone LICENSE file at this commit",
+    "runtimeImports": [
+      "src/data/jijanggan_strength_table.ts"
+    ],
+    "adaptedRules": [
+      "position-weighted supportive element ratio",
+      "monthly hidden-stem revelation priority",
+      "month-branch seasonal candidate comparison"
+    ],
+    "excluded": [
+      "calendar/time engine",
+      "special-pattern automatic classifier",
+      "upstream fortune narratives, health claims, random or confidence scores",
+      "MCP/server/install scripts"
+    ]
+  },
+  "kasi": {
+    "provider": "한국천문연구원",
+    "documentation": "https://www.data.go.kr/data/15012679/openapi.do",
+    "endpoint": "https://apis.data.go.kr/B090041/openapi/service/LrsrCldInfoService/getLunCalInfo",
+    "dataset": "/saju/kasi-calendar-20261010.json",
+    "from": "1900-01-01",
+    "to": "2050-12-31",
+    "usage": "Static public calendar data only; birth inputs and API credentials never sent by the browser; compares civil lunar date/leap month, not solar-term year/month pillars",
+    "days": 55152,
+    "sha256": "3ac0847483ac1508f01963906f4b94f2b3ff8598a20e147daab49ea0ac8b399e",
+    "fetchedAt": "2026-10-09T17:01:02.428Z",
+    "validation": "All 55152 civil days match solar-to-lunar and lunar-to-solar after correction; daily ganji cycle and 1812 monthly noon pillar samples verified"
+  }
+}

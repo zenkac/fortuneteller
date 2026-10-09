@@ -1,0 +1,75 @@
+{
+  "repository": "hjsh200219/fortuneteller",
+  "fork": "zenkac/fortuneteller",
+  "commit": "844d9f6e601328a00467e8dec0966913526f858d",
+  "license": "MIT declared in upstream README.md and package.json; no standalone LICENSE file at this commit",
+  "runtimeImports": [
+    "src/data/jijanggan_strength_table.ts"
+  ],
+  "adaptedRules": [
+    "position-weighted supportive element ratio",
+    "monthly hidden-stem revelation priority",
+    "month-branch seasonal candidate comparison"
+  ],
+  "excluded": [
+    "calendar/time engine",
+    "special-pattern automatic classifier",
+    "upstream fortune narratives, health claims, random or confidence scores",
+    "MCP/server/install scripts"
+  ],
+  "copiedFiles": [
+    {
+      "path": "package.json",
+      "sha256": "959638ecba765e5ee6d048b678cdc19cba155ab6820bb6dca1539cd4afc6ea0c"
+    },
+    {
+      "path": "README.md",
+      "sha256": "006f86c8bd687b73198836005e1394a981850c3dba818878dc3e41d3bff4c7a2"
+    },
+    {
+      "path": "src/data/earthly_branches.ts",
+      "sha256": "ab183563ebbe29e396d3d19fe2ae27d2728264822ec20a7d28a44e5070b6f1ab"
+    },
+    {
+      "path": "src/data/heavenly_stems.ts",
+      "sha256": "f2bab35e99c62226451b38c352642e68182b0796e3f70527e5e07f9c53acd864"
+    },
+    {
+      "path": "src/data/jijanggan_strength_table.ts",
+      "sha256": "902f05ee3d10e86a5866c984996d8893a9e5b6ce7621d972715aff04c9c96a54"
+    },
+    {
+      "path": "src/data/school_presets.ts",
+      "sha256": "c71baab114bec102d822b982f29c5962af11f24b7ca23c7628dc93e80f1ce146"
+    },
+    {
+      "path": "src/data/wuxing.ts",
+      "sha256": "b597673bf8a2922b1896557a2a1932f8fdd7ab1ec9163b685472525e47110d14"
+    },
+    {
+      "path": "src/lib/day_master_strength.ts",
+      "sha256": "e98fd2b431e73ba447a62338a80e0e365270a1ffbe8cf85c156a47d87cea3c7a"
+    },
+    {
+      "path": "src/lib/gyeok_guk.ts",
+      "sha256": "e174ff1c9718aa34eab2bcbfdfb2075aa578201326eed48811ed509a532424f8"
+    },
+    {
+      "path": "src/types/index.ts",
+      "sha256": "9d7a0dcb0f74aee16660ab5ce4aa63dc3376b10363cf7390e15da8ef556d3cfe"
+    },
+    {
+      "path": "src/types/interpretation.ts",
+      "sha256": "5d221ef9d83071d3ccf410a6bd255fda65c5dc9cc0b31decee8ac604ec551c0a"
+    },
+    {
+      "path": "src/lib/yongsin/seasonal_algorithm.ts",
+      "sha256": "bfe13be96a4e6d0650f8a7e7f1d76a3df0696a5b1bb908ddca8c5955c416c6c7"
+    },
+    {
+      "path": "src/lib/yongsin/strength_algorithm.ts",
+      "sha256": "2631c8ac8792f4dbef813161bf7b01bee6a73486df48b47fe72365e94904595a"
+    }
+  ],
+  "notes": "Original files kept for audit. Only a reviewed static data table is imported at runtime. SOLO adapter and explanations live in lib/saju/structure.ts and aws-site/src/SajuStructure.tsx."
+}
